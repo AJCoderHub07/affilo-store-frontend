@@ -40,7 +40,7 @@ function Admin() {
         try {
 
             const response = await fetch(
-                '${import.meta.env.VITE_API_URL}/api/products'
+                `${import.meta.env.VITE_API_URL}/api/products`
             );
 
             const data = await response.json();
@@ -120,7 +120,7 @@ function Admin() {
 
             const url = editingId
                 ? `${import.meta.env.VITE_API_URL}/api/products/${editingId}`
-                : '${import.meta.env.VITE_API_URL}/api/products';
+                : `${import.meta.env.VITE_API_URL}/api/products`;
 
             const method =
                 editingId ? "PUT" : "POST";
