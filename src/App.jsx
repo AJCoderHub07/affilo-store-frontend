@@ -2,6 +2,9 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import Admin from "./Admin";
 import AdminLogin from "./AdminLogin";
+import AdBanner468x60 from "./components/AdBanner468-60";
+import AdBanner728x90 from "./components/AdBanner720-90";
+import AdPopunder from "./components/AdPopunder";
 
 function App() {
 
@@ -110,6 +113,8 @@ function App() {
 
     <div className="app">
 
+      <AdPopunder />
+
 
       {/* =================================================
           HEADER
@@ -200,6 +205,21 @@ function App() {
         </div>
 
       </section>
+
+      {/* =================================================
+          AdBanner720-90
+      ================================================= */}
+
+      <div
+        style={{
+          width: "100%",
+          display: "flex",
+          justifyContent: "center",
+          margin: "20px 0",
+        }}
+      >
+        <AdBanner728x90 />
+      </div>
 
 
       {/* =================================================
@@ -412,6 +432,21 @@ function App() {
       </section>
 
       {/* =================================================
+          AdBanner468-60
+      ================================================= */}
+
+      <div
+        style={{
+          width: "100%",
+          display: "flex",
+          justifyContent: "center",
+          margin: "20px 0",
+        }}
+      >
+        <AdBanner468x60 />
+      </div>
+
+      {/* =================================================
           CONTACT US
       ================================================= */}
 
@@ -554,6 +589,10 @@ function App() {
 
         </div>
 
+
+        <p>
+          👨‍💻 Developed by : Aalesh Jadhao
+        </p>
 
         <p>
           © 2026 Affilo Store. All Rights Reserved.
