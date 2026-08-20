@@ -485,7 +485,7 @@ function App() {
             {/* FACEBOOK */}
 
             <a
-              href="https://www.facebook.com/share/1EjnTdMbvr/"
+              href="#"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-contact facebook-btn"
@@ -542,7 +542,7 @@ function App() {
             {/* YOUTUBE */}
 
             <a
-              href="https://youtube.com/@being_ishita-official?si=UvsrgiojGXfG854_"
+              href="#"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-contact youtube-btn"
@@ -591,7 +591,7 @@ function App() {
 
 
         <p>
-          👨‍💻 Developed by : Aalesh Jadhao
+          👨‍💻 Developed by : A.J. Coder Hub
         </p>
 
         <p>
