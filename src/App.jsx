@@ -16,6 +16,13 @@ function App() {
   const [selectedStore, setSelectedStore] = useState("All");
 
   // =====================================================
+  // PAGINATION
+  // =====================================================
+
+  const PRODUCTS_PER_PAGE = 9;
+  const [currentPage, setCurrentPage] = useState(1);
+
+  // =====================================================
   // FETCH PRODUCTS
   // =====================================================
 
@@ -103,6 +110,23 @@ function App() {
     return matchesSearch && matchesStore;
 
   });
+
+  // Reset to page 1 whenever search/store filter changes.
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [search, selectedStore]);
+
+  const totalPages =
+    Math.ceil(filteredProducts.length / PRODUCTS_PER_PAGE);
+
+  const startIndex =
+    (currentPage - 1) * PRODUCTS_PER_PAGE;
+
+  const paginatedProducts =
+    filteredProducts.slice(
+      startIndex,
+      startIndex + PRODUCTS_PER_PAGE
+    );
 
 
   // =====================================================
@@ -345,7 +369,7 @@ function App() {
 
           <div className="product-grid">
 
-            {filteredProducts.map((product) => (
+            {paginatedProducts.map((product) => (
 
               <div
                 className="product-card"
@@ -424,6 +448,59 @@ function App() {
               </div>
 
             ))}
+
+          </div>
+
+        )}
+
+        {totalPages > 1 && (
+
+          <div className="pagination">
+
+            <button
+              className="pagination-button"
+              onClick={() =>
+                setCurrentPage((page) => Math.max(page - 1, 1))
+              }
+              disabled={currentPage === 1}
+            >
+              ← Previous
+            </button>
+
+            <div className="pagination-pages">
+
+              {Array.from(
+                { length: totalPages },
+                (_, index) => index + 1
+              ).map((page) => (
+
+                <button
+                  key={page}
+                  className={
+                    currentPage === page
+                      ? "pagination-page active"
+                      : "pagination-page"
+                  }
+                  onClick={() => setCurrentPage(page)}
+                >
+                  {page}
+                </button>
+
+              ))}
+
+            </div>
+
+            <button
+              className="pagination-button"
+              onClick={() =>
+                setCurrentPage((page) =>
+                  Math.min(page + 1, totalPages)
+                )
+              }
+              disabled={currentPage === totalPages}
+            >
+              Next →
+            </button>
 
           </div>
 
