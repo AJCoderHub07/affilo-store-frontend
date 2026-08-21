@@ -485,7 +485,7 @@ function App() {
             {/* FACEBOOK */}
 
             <a
-              href="#"
+              href="https://www.effectivecpmnetwork.com/t27k8jnusm?key=3fdf086d34750f9b1886b9e1e49cd18e"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-contact facebook-btn"
@@ -513,7 +513,7 @@ function App() {
             {/* INSTAGRAM */}
 
             <a
-              href="#"
+              href="https://www.effectivecpmnetwork.com/t27k8jnusm?key=3fdf086d34750f9b1886b9e1e49cd18e"
               className="btn-contact instagram-btn"
               onClick={(e) =>
                 e.preventDefault()
@@ -542,7 +542,7 @@ function App() {
             {/* YOUTUBE */}
 
             <a
-              href="#"
+              href="https://www.effectivecpmnetwork.com/t27k8jnusm?key=3fdf086d34750f9b1886b9e1e49cd18e"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-contact youtube-btn"
